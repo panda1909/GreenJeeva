@@ -1,0 +1,1082 @@
+{% load static %}
+<head>
+	<title>Product Detail</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.png' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/iconic/css/material-design-iconic-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/linearicons-v1.0.0/icon-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/daterangepicker/daterangepicker.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/slick/slick.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/MagnificPopup/magnific-popup.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'new/fonts/icomoon/style.css' %}">
+
+<link rel="stylesheet" href="{% static 'new/css/owl.carousel.min.css' %}">
+<link rel="stylesheet" href="{% static 'new/css/styles.css' %}">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="{% static 'new/css/bootstrap.min.css' %}">
+
+<!--===============================================================================================-->
+</head>
+<body class="animsition">
+
+	<!-- Header -->
+	
+	<!-- Header -->
+	<header class="header-v3"></header>
+		
+
+			
+		<div class="site-mobile-menu site-navbar-target">
+			<div class="site-mobile-menu-header">
+			  <div class="site-mobile-menu-close mt-3">
+				<span class="icon-close2 js-menu-toggle"></span>
+			  </div>
+			</div>
+			<div class="site-mobile-menu-body"></div>
+		  </div>
+		 
+		  
+		  <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+	  
+			<div class="container-fluid m-lr-10">
+			  <div class="row align-items-center">
+				
+				<div class="col-6 col-xl-2">
+				  <a href="#" class="logo">
+						<img src="{% static 'images/black logo.png' %}" alt="IMG-LOGO" class="mt-1 ml-lg-5">
+					</a>
+				</div>
+	  
+				<div class="col-12 col-md-10 d-none d-xl-block">
+				  <nav class="site-navigation position-relative text-right" role="navigation">
+	  
+					<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+					  <li><a href="#home-section" class="nav-link">Home</a></li>
+					  <li><a href="#home-section" class="nav-link">Abouts US</a></li>
+					  <li class="has-children">
+						<a href="#about-section" class="nav-link">Products</a>
+						<ul class="dropdown">
+						  <li><a href="#team-section" class="nav-link">Dietary Ingredients</a></li>
+						  <li><a href="#pricing-section" class="nav-link">Ancient Spices</a></li>
+						  <li><a href="#faq-section" class="nav-link">Amino Acids</a></li>
+						  <li><a href="#team-section" class="nav-link">Dietary Ingredients</a></li>
+						  <li><a href="#pricing-section" class="nav-link">Ancient Spices</a></li>
+						  <li><a href="#faq-section" class="nav-link">Amino Acids</a></li>
+						  <li><a href="#team-section" class="nav-link">Dietary Ingredients</a></li>
+						  <li><a href="#pricing-section" class="nav-link">Ancient Spices</a></li>
+						  <li><a href="#faq-section" class="nav-link">Amino Acids</a></li>
+						  
+						  <li class="has-children">
+							<a href="#">More Links</a>
+							<ul class="dropdown">
+							  <li><a href="#">Menu One</a></li>
+							  <li><a href="#">Menu Two</a></li>
+							  <li><a href="#">Menu Three</a></li>
+							</ul>
+						  </li>
+						</ul>
+					  </li>
+					  
+					  <li><a href="#home-section" class="nav-link">Certificate</a></li>
+					  <li><a href="#blog-section" class="nav-link">Blog</a></li>
+					  <li><a href="#contact-section" class="nav-link">Contact</a></li>
+					 
+					</ul>
+				  </nav>
+				</div>
+	  
+	  
+				<div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+	  
+			  </div>
+			</div>
+			
+		  </header>
+
+
+	</header>
+
+
+
+		
+
+			<section>
+
+
+		
+			
+				<div class="p-b-5 p-t-100" >
+					<h1 style="font-size: 18px; font-style: italic;" class="ltext-100 cl4 txt-center respon1">
+						See What Others are buying
+					</h1>
+				</div>
+			
+				<h2 style="color: black;" class="ltext-105 cl0 txt-center p-b-10">
+					Product Details
+				</h2>
+			
+			
+			
+				<section>
+
+
+
+
+
+
+
+
+
+
+				
+			</section>
+
+
+		
+
+	
+
+
+
+	
+
+	<!-- breadcrumb -->
+	<div class="container">
+		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
+			<a href="index.html" class="stext-109 cl8 hov-cl1 trans-04">
+				Home
+				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+			</a>
+
+			<a href="product.html" class="stext-109 cl8 hov-cl1 trans-04">
+				Men
+				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+			</a>
+
+			<span class="stext-109 cl4">
+				Product No 1
+			</span>
+		</div>
+	</div>
+		
+
+	<!-- Product Detail -->
+	<section class="sec-product-detail bg0 p-t-65 p-b-60">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-lg-7 p-b-30">
+					<div class="p-l-25 p-r-30 p-lr-0-lg">
+						<div class="wrap-slick3 flex-sb flex-w">
+							<div class="wrap-slick3-dots"></div>
+							<div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
+
+							<div class="slick3 gallery-lb">
+								<div class="item-slick3" data-thumb="{% static 'images/10.png' %}">
+
+
+									<div class="wrap-pic-w pos-relative">
+										<img style="border: 1px solid rgb(228, 228, 228);" src="{% static 'images/10.png' %}" alt="IMG-PRODUCT">
+
+										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="{% static 'images/10.png' %}">
+											<i class="fa fa-expand"></i>
+										</a>
+									</div>
+
+									
+								</div>
+
+								<div class="item-slick3" data-thumb="{% static 'images/10.png' %}">
+									<div class="wrap-pic-w pos-relative">
+										<img style="border: 1px solid rgb(228, 228, 228);" src="{% static 'images/10.png' %}" alt="IMG-PRODUCT">
+
+										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="{% static 'images/10.png' %}">
+											<i class="fa fa-expand"></i>
+										</a>
+									</div>
+								</div>
+
+								<div class="item-slick3" data-thumb="{% static 'images/10.png' %}">
+									<div class="wrap-pic-w pos-relative">
+										<img style="border: 1px solid rgb(228, 228, 228);" src="{% static 'images/10.png' %}" alt="IMG-PRODUCT">
+
+										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="{% static 'images/10.png' %}">
+											<i class="fa fa-expand"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+					
+				<div class="col-md-6 col-lg-5 p-b-30">
+					<div class="p-r-50 p-lr-0-lg">
+						<h4 class="mtext-105 cl2 js-name-detail p-b-14">
+							Papaya Fruit Extract Powder 10:1
+						</h4>
+
+						<span class="mtext-106 cl2">
+							Product ID: 112
+						</span>
+
+						<p class="stext-102 cl3 p-t-23">
+							Curcuma Longa Is Commonly Known As Turmeric. It Belongs To Family Zingiberaceae. Its Root Is Used In Spice. It Found In Yellow-Orange Color Powder. It Is  Widely Used In Food For Its Flavor And Yellow Color.  The Major Active Components In Turmeric Are Curcumin, Demethoxycurcumin
+						</p>
+						
+						<!--  -->
+						<div class="p-t-33">
+							<div class="flex-w flex-r-m p-b-10">
+							
+								
+							</div>
+
+						
+							<div class="flex-w flex-l-m p-b-10">
+
+								<div class="row no-gutters">
+
+									<div class="col-6">
+										<div class="size-204 flex-w flex-m respon6-next">
+											<button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail mr-3" style="background-color: white;
+											border: 1px solid rgb(73, 95, 223); color: rgb(73, 95, 223)">
+												View Details
+											</button>
+		
+											
+										</div>
+	
+									</div>
+
+									<div class="col-6">
+										<div class="size-204 flex-w flex-m respon6-next">
+											<button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail mr-3">
+												See More
+											</button>
+		
+											
+										</div>
+	
+									</div>
+									
+
+								</div>
+
+
+								
+							</div>	
+						</div>
+
+						<!--  -->
+						<div class="flex-w flex-m p-l-0 p-t-40 respon7">
+							
+
+							<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Facebook">
+								<i class="fa fa-facebook"></i>
+							</a>
+
+							<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Twitter">
+								<i class="fa fa-twitter"></i>
+							</a>
+
+							<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Google Plus">
+								<i class="fa fa-google-plus"></i>
+							</a>
+						</div>
+
+
+					
+
+
+
+
+					</div>
+				</div>
+			</div>
+
+			<div class="bor10 m-t-50 p-t-43 p-b-40">
+				<!-- Tab01 -->
+				<div class="tab01">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+						<li class="nav-item p-b-10">
+							<a class="nav-link active" data-toggle="tab" href="#description" role="tab">Description</a>
+						</li>
+<!-- 
+						<li class="nav-item p-b-10">
+							<a class="nav-link" data-toggle="tab" href="#information" role="tab">Additional information</a>
+						</li> -->
+
+						
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content p-t-43">
+						<!-- - -->
+						<div class="tab-pane fade show active" id="description" role="tabpanel">
+							<div class="how-pos2 p-lr-15-md">
+								<p class="stext-102 cl6">
+									Curcuma Longa Is Commonly Known As Turmeric. It Belongs To Family Zingiberaceae. Its Root Is Used In Spice. It Found In Yellow-Orange Color Powder. It Is Widely Used In Food For Its Flavor And Yellow Color. The Major Active Components In Turmeric Are Curcumin, Demethoxycurcumin
+									Curcuma Longa Is Commonly Known As Turmeric. It Belongs To Family Zingiberaceae. Its Root Is Used In Spice. It Found In Yellow-Orange Color Powder. It Is Widely Used In Food For Its Flavor And Yellow Color. The Major Active Components In Turmeric Are Curcumin, Demethoxycurcumin
+									Curcuma Longa Is Commonly Known As Turmeric. It Belongs To Family Zingiberaceae. Its Root Is Used In Spice. It Found In Yellow-Orange Color Powder. It Is Widely Used In Food For Its Flavor And Yellow Color. The Major Active Components In Turmeric Are Curcumin, Demethoxycurcumin
+								</p>
+							</div>
+						</div>
+
+						<!-- - -->
+						<!-- <div class="tab-pane fade" id="information" role="tabpanel">
+							<div class="row">
+								<div class="col-sm-10 col-md-12 col-lg-6 m-lr-auto">
+									<ul class="p-lr-28 p-lr-15-sm">
+										<li class="flex-w flex-t p-b-7">
+											<span class="stext-102 cl3 size-205">
+												Weight
+											</span>
+
+											<span class="stext-102 cl6 size-206">
+												0.79 kg
+											</span>
+										</li>
+
+										<li class="flex-w flex-t p-b-7">
+											<span class="stext-102 cl3 size-205">
+												Dimensions
+											</span>
+
+											<span class="stext-102 cl6 size-206">
+												110 x 33 x 100 cm
+											</span>
+										</li>
+
+										<li class="flex-w flex-t p-b-7">
+											<span class="stext-102 cl3 size-205">
+												Type
+											</span>
+
+											<span class="stext-102 cl6 size-206">
+												Raw Ingridients
+											</span>
+										</li>
+
+										<li class="flex-w flex-t p-b-7">
+											<span class="stext-102 cl3 size-205">
+												Color
+											</span>
+
+											<span class="stext-102 cl6 size-206">
+												Brown, Yellow
+											</span>
+										</li>
+
+										<li class="flex-w flex-t p-b-7">
+											<span class="stext-102 cl3 size-205">
+												Size
+											</span>
+
+											<span class="stext-102 cl6 size-206">
+												1Kg, 2kg , 3kg
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div> -->
+
+					
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="mt-5">
+
+		</div>
+
+		<div class="container mt-5" >
+
+			<div class="p-t-10 p-b-5">
+				<h1 style="font-size: 18px; font-style: italic;" class="ltext-100 cl4 txt-center respon1">
+					See What we added in out stores
+				</h1>
+			</div>
+	
+			<div class="p-b-45">
+				<h3 class="ltext-106 cl5 txt-center">
+					Related Products
+				</h3>
+			</div>
+
+			<!-- Slide2 -->
+			<div class="wrap-slick2">
+				<div class="slick2">
+					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-10">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-pic hov-img0 border">
+								<img src="{% static 'images/11.png' %}" alt="IMG-PRODUCT"  style="border: 1px solid rgb(247, 247, 247);">
+
+								<a href="product_details.html" class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 ">
+									View Item
+								</a>
+							</div>
+
+							<div class="block2-txt flex-w flex-t p-t-14">
+								<div class="block2-txt-child1 flex-col-l ">
+									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+										Organic Triphala Extract
+									</a>
+
+									<span class="stext-105 cl3" style="color: rgb(80, 80, 80);">
+										 <b> Product ID : 112 </b> 
+									</span>
+								</div>
+
+								
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-pic hov-img0 border">
+								<img src="{% static 'images/10.png' %}" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">
+
+								<a href="product_details.html" class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 ">
+									View Item
+								</a>
+							</div>
+
+							<div class="block2-txt flex-w flex-t p-t-14">
+								<div class="block2-txt-child1 flex-col-l ">
+									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+										Organic sweet potato Powder
+									</a>
+
+									<span class="stext-105 cl3" style="color: rgb(80, 80, 80);">
+									 <b> Product ID : 113 </b>	
+									</span>
+								</div>
+
+								
+							</div>
+						</div>
+					</div>
+
+					
+					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-pic hov-img0 border">
+								<img src="{% static 'images/13.png' %}" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">
+
+								<a href="product_details.html" class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 ">
+									View Item
+								</a>
+							</div>
+
+							<div class="block2-txt flex-w flex-t p-t-14">
+								<div class="block2-txt-child1 flex-col-l ">
+									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+										Trustveda Organic Ashwagandha Root Powder
+									</a>
+
+									<span class="stext-105 cl3" style="color: rgb(80, 80, 80);">
+										<b> Product ID : 114  </b>
+									</span>
+								</div>
+
+								
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+							<!-- Block2 -->
+							<div class="block2">
+								<div class="block2-pic hov-img0 border">
+									<img src="{% static 'images/12.png' %}" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">
+
+									<a href="product_details.html" class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 1">
+										View Item
+									</a>
+								</div>
+
+								<div class="block2-txt flex-w flex-t p-t-14">
+									<div class="block2-txt-child1 flex-col-l ">
+										<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+											Organic Brown Rice Protein powder
+										</a>
+
+										<span class="stext-105 cl3" style="color: rgb(80, 80, 80);">
+											<b> Product ID : 115  </b>
+										</span>
+									</div>
+
+									
+								</div>
+							</div>
+						</div>
+
+						<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+							<!-- Block2 -->
+							<div class="block2">
+								<div class="block2-pic hov-img0 border">
+									<img src="{% static 'images/11.png' %}" alt="IMG-PRODUCT"  style="border: 1px solid rgb(247, 247, 247);">
+
+									<a href="product_details.html" class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 ">
+										View Item
+									</a>
+								</div>
+
+								<div class="block2-txt flex-w flex-t p-t-14">
+									<div class="block2-txt-child1 flex-col-l ">
+										<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+											Organic Triphala Extract
+										</a>
+
+										<span class="stext-105 cl3" style="color: rgb(80, 80, 80);">
+											 <b> Product ID : 112 </b> 
+										</span>
+									</div>
+
+									
+								</div>
+							</div>
+						</div>
+
+						<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+							<!-- Block2 -->
+							<div class="block2">
+								<div class="block2-pic hov-img0 border">
+									<img src="{% static 'images/10.png' %}" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">
+
+									<a href="product_details.html" class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04">
+										View Item
+									</a>
+								</div>
+
+								<div class="block2-txt flex-w flex-t p-t-14">
+									<div class="block2-txt-child1 flex-col-l ">
+										<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+											Organic sweet potato Powder
+										</a>
+
+										<span class="stext-105 cl3" style="color: rgb(80, 80, 80);">
+										 <b> Product ID : 113 </b>	
+										</span>
+									</div>
+
+									
+								</div>
+							</div>
+						</div>
+
+						
+						<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+							<!-- Block2 -->
+							<div class="block2">
+								<div class="block2-pic hov-img0 border">
+									<img src="{% static 'images/13.png' %}" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">
+
+									<a href="product_details.html" class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 ">
+										View Item
+									</a>
+								</div>
+
+								<div class="block2-txt flex-w flex-t p-t-14">
+									<div class="block2-txt-child1 flex-col-l ">
+										<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+											Trustveda Organic Ashwagandha Root Powder
+										</a>
+
+										<span class="stext-105 cl3" style="color: rgb(80, 80, 80);">
+											<b> Product ID : 114  </b>
+										</span>
+									</div>
+
+									
+								</div>
+							</div>
+						</div>
+
+						<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+								<!-- Block2 -->
+								<div class="block2">
+									<div class="block2-pic hov-img0 border">
+										<img src="{% static 'images/12.png' %}" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">
+	
+										<a href="product_details.html" class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 ">
+											View Item
+										</a>
+									</div>
+	
+									<div class="block2-txt flex-w flex-t p-t-14">
+										<div class="block2-txt-child1 flex-col-l ">
+											<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												Organic Brown Rice Protein powder
+											</a>
+	
+											<span class="stext-105 cl3" style="color: rgb(80, 80, 80);">
+												<b> Product ID : 115  </b>
+											</span>
+										</div>
+	
+										
+									</div>
+								</div>
+							</div>
+					
+				</div>
+			</div>
+		</div>
+
+	
+	</section>
+
+
+	
+
+	<!-- Footer -->
+	<footer class="bg3 p-t-75 p-b-32">
+		<div class="container">
+			<div class="row">
+
+
+				<div class="col-sm-6 col-lg-4 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						GET IN TOUCH
+					</h4>
+
+					<p class="stext-107 cl7 size-201">
+						Any questions? Let us know in store india. Phone Number +91 *********
+					</p>
+
+					<div class="p-t-27">
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa fa-facebook"></i>
+						</a>
+
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa fa-instagram"></i>
+						</a>
+
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa fa-pinterest-p"></i>
+						</a>
+					</div>
+				</div>
+
+
+
+				<div class="col-sm-6 col-lg-4 p-b-50">
+					
+			<div class="p-t-40">
+				<div class="flex-c-m flex-w p-b-18">
+					<a href="#" class="m-all-1">
+						<img style="max-height: 50px; max-width: 50px;" src="{% static 'images/1.png' %}" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-all-1">
+						<img style="max-height: 60px; max-width: 60px;" src="{% static 'images/sas.png' %}" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-all-1">
+						<img style="max-height: 100px; max-width: 100px;" src="{% static 'images/cac.png' %}" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-all-1">
+						<img style="max-height: 50px; max-width: 50px;" src="{% static 'images/sfgd.png' %}" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-all-1">
+						<img style="max-height: 50px; max-width: 50px;" src="{% static 'images/xac.png' %}" alt="ICON-PAY">
+					</a>
+				</div>
+
+				<p class="stext-107 cl6 txt-center">
+					* These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure, or prevent any disease.
+
+				</p>
+			</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-4 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						Contact Us
+					</h4>
+
+					<ul>
+						<li class="p-b-10">
+							<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+								<i class="fa fa-facebook"></i>
+							</a>
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Track Order
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+								<i class="fa fa-facebook"></i>
+							</a>
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Returns 
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+								<i class="fa fa-facebook"></i>
+							</a>
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Shipping
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+								<i class="fa fa-facebook"></i>
+							</a>
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								FAQs
+							</a>
+						</li>
+					</ul>
+				</div>
+
+			
+
+			
+			</div>
+
+		</div>
+	</footer>
+
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="zmdi zmdi-chevron-up"></i>
+		</span>
+	</div>
+
+	<!-- Modal1 -->
+	<div class="wrap-modal1 js-modal1 p-t-60 p-b-20">
+		<div class="overlay-modal1 js-hide-modal1"></div>
+
+		<div class="container">
+			<div class="bg0 p-t-60 p-b-30 p-lr-15-lg how-pos3-parent">
+				<button class="how-pos3 hov3 trans-04 js-hide-modal1">
+					<img src="{% static 'images/icons/icon-close.png' %}" alt="CLOSE">
+				</button>
+
+				<div class="row">
+					<div class="col-md-6 col-lg-7 p-b-30">
+						<div class="p-l-25 p-r-30 p-lr-0-lg">
+							<div class="wrap-slick3 flex-sb flex-w">
+								<div class="wrap-slick3-dots"></div>
+								<div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
+
+								<div class="slick3 gallery-lb">
+									<div class="item-slick3" data-thumb="{% static 'images/product-detail-01.jpg' %}">
+										<div class="wrap-pic-w pos-relative">
+											<img src="{% static 'images/product-detail-01.jpg' %}" alt="IMG-PRODUCT">
+
+											<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="{% static 'images/product-detail-01.jpg' %}">
+												<i class="fa fa-expand"></i>
+											</a>
+										</div>
+									</div>
+
+									<div class="item-slick3" data-thumb="{% static 'images/product-detail-02.jpg' %}">
+										<div class="wrap-pic-w pos-relative">
+											<img src="{% static 'images/product-detail-02.jpg' %}" alt="IMG-PRODUCT">
+
+											<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="{% static 'images/product-detail-02.jpg' %}">
+												<i class="fa fa-expand"></i>
+											</a>
+										</div>
+									</div>
+
+									<div class="item-slick3" data-thumb="{% static 'images/product-detail-03.jpg' %}">
+										<div class="wrap-pic-w pos-relative">
+											<img src="{% static 'images/product-detail-03.jpg' %}" alt="IMG-PRODUCT">
+
+											<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="{% static 'images/product-detail-03.jpg' %}">
+												<i class="fa fa-expand"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-5 p-b-30">
+						<div class="p-r-50 p-t-5 p-lr-0-lg">
+							<h4 class="mtext-105 cl2 js-name-detail p-b-14">
+								Lightweight Jacket
+							</h4>
+
+							<span class="mtext-106 cl2">
+								$58.79
+							</span>
+
+							<p class="stext-102 cl3 p-t-23">
+								Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat.
+							</p>
+							
+							<!--  -->
+							<div class="p-t-33">
+								<div class="flex-w flex-r-m p-b-10">
+									<div class="size-203 flex-c-m respon6">
+										Size
+									</div>
+
+									<div class="size-204 respon6-next">
+										<div class="rs1-select2 bor8 bg0">
+											<select class="js-select2" name="time">
+												<option>Choose an option</option>
+												<option>Size S</option>
+												<option>Size M</option>
+												<option>Size L</option>
+												<option>Size XL</option>
+											</select>
+											<div class="dropDownSelect2"></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="flex-w flex-r-m p-b-10">
+									<div class="size-203 flex-c-m respon6">
+										Color
+									</div>
+
+									<div class="size-204 respon6-next">
+										<div class="rs1-select2 bor8 bg0">
+											<select class="js-select2" name="time">
+												<option>Choose an option</option>
+												<option>Red</option>
+												<option>Blue</option>
+												<option>White</option>
+												<option>Grey</option>
+											</select>
+											<div class="dropDownSelect2"></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="flex-w flex-r-m p-b-10">
+									<div class="size-204 flex-w flex-m respon6-next">
+										<div class="wrap-num-product flex-w m-r-20 m-tb-10">
+											<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+												<i class="fs-16 zmdi zmdi-minus"></i>
+											</div>
+
+											<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="1">
+
+											<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
+												<i class="fs-16 zmdi zmdi-plus"></i>
+											</div>
+										</div>
+
+										<button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
+											Add to cart
+										</button>
+									</div>
+								</div>	
+							</div>
+
+							<!--  -->
+							<div class="flex-w flex-m p-l-100 p-t-40 respon7">
+								<div class="flex-m bor9 p-r-10 m-r-11">
+									<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 js-addwish-detail tooltip100" data-tooltip="Add to Wishlist">
+										<i class="zmdi zmdi-favorite"></i>
+									</a>
+								</div>
+
+								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Facebook">
+									<i class="fa fa-facebook"></i>
+								</a>
+
+								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Twitter">
+									<i class="fa fa-twitter"></i>
+								</a>
+
+								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Google Plus">
+									<i class="fa fa-google-plus"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	
+<!--===============================================================================================-->	
+<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+	
+		
+<script src="{% static 'new/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'new/js/popper.min.js' %}"></script>
+<script src="{% static 'new/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'new/js/jquery.sticky.js' %}"></script>
+<script src="{% static 'new/js/main.js' %}"></script>
+
+<!--===============================================================================================-->
+<script src="{% static 'vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+<script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+<script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+<script>
+	$(".js-select2").each(function(){
+		$(this).select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $(this).next('.dropDownSelect2')
+		});
+	})
+</script>
+<!--===============================================================================================-->
+<script src="{% static 'vendor/daterangepicker/moment.min.js' %}"></script>
+<script src="{% static 'vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+<script src="{% static 'vendor/slick/slick.min.js' %}"></script>
+<script src="{% static 'js/slick-custom.js' %}"></script>
+<!--===============================================================================================-->
+<script src="{% static 'vendor/parallax100/parallax100.js' %}"></script>
+<script>
+	$('.parallax100').parallax100();
+</script>
+<!--===============================================================================================-->
+<script src="{% static 'vendor/MagnificPopup/jquery.magnific-popup.min.js' %}"></script>
+<script>
+	$('.gallery-lb').each(function() { // the containers for all your galleries
+		$(this).magnificPopup({
+			delegate: 'a', // the selector for gallery item
+			type: 'image',
+			gallery: {
+				enabled:true
+			},
+			mainClass: 'mfp-fade'
+		});
+	});
+</script>
+<!--===============================================================================================-->
+<script src="{% static 'vendor/isotope/isotope.pkgd.min.js' %}"></script>
+<!--===============================================================================================-->
+<script src="{% static 'vendor/sweetalert/sweetalert.min.js' %}"></script>
+<script>
+	$('.js-addwish-b2').on('click', function(e){
+		e.preventDefault();
+	});
+
+	$('.js-addwish-b2').each(function(){
+		var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
+		$(this).on('click', function(){
+			swal(nameProduct, "is added to wishlist !", "success");
+
+			$(this).addClass('js-addedwish-b2');
+			$(this).off('click');
+		});
+	});
+
+	$(document).ready(function(){
+$("#search").focus(function() {
+  $(".search-box").addClass("border-searching");
+  $(".search-icon").addClass("si-rotate");
+});
+$("#search").blur(function() {
+  $(".search-box").removeClass("border-searching");
+  $(".search-icon").removeClass("si-rotate");
+});
+$("#search").keyup(function() {
+	if($(this).val().length > 0) {
+	  $(".go-icon").addClass("go-in");
+	}
+	else {
+	  $(".go-icon").removeClass("go-in");
+	}
+});
+$(".go-icon").click(function(){
+  $(".search-form").submit();
+});
+});
+
+
+	$('.js-addwish-detail').each(function(){
+		var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
+
+		$(this).on('click', function(){
+			swal(nameProduct, "is added to wishlist !", "success");
+
+			$(this).addClass('js-addedwish-detail');
+			$(this).off('click');
+		});
+	});
+
+	/*---------------------------------------------*/
+
+	$('.js-addcart-detail').each(function(){
+		var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
+		$(this).on('click', function(){
+			swal(nameProduct, "is added to cart !", "success");
+		});
+	});
+</script>
+<!--===============================================================================================-->
+<script src="{% static 'vendor/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
+<script>
+	$('.js-pscroll').each(function(){
+		$(this).css('position','relative');
+		$(this).css('overflow','hidden');
+		var ps = new PerfectScrollbar(this, {
+			wheelSpeed: 1,
+			scrollingThreshold: 1000,
+			wheelPropagation: false,
+		});
+
+		$(window).on('resize', function(){
+			ps.update();
+		})
+	});
+</script>
+<!--===============================================================================================-->
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
