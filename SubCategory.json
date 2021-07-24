@@ -1,0 +1,1 @@
+[{"model": "core.subcategory", "pk": 1, "fields": {"Category": 1, "Name": "Sub Category"}}, {"model": "core.subcategory", "pk": 2, "fields": {"Category": 2, "Name": "Test Sub Category"}}, {"model": "core.subcategory", "pk": 3, "fields": {"Category": 3, "Name": "Sub demo"}}]

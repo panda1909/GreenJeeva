@@ -1,0 +1,23 @@
+[
+  {
+    "model": "core.category",
+    "pk": 1,
+    "fields": {
+      "Name": "Organics"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 2,
+    "fields": {
+      "Name": "Test Category"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 3,
+    "fields": {
+      "Name": "demo cat"
+    }
+  }
+]
