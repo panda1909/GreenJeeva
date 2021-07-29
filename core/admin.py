@@ -13,7 +13,7 @@ def create_action(subcategory):
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('ProductName', 'SKU', 'SubCategory')
+    list_display = ('ProductName', 'SKU', 'SubCategory', 'views')
 
     def get_actions(self, request):
         actions = dict(create_action(q) for q in SubCategory.objects.all())
@@ -29,8 +29,13 @@ class BlogAdmin(SummernoteModelAdmin):
     summernote_fields = ('Content',)
 
 
+class ViewAdmin(admin.ModelAdmin):
+    list_display = ('Product', 'Date', 'ip')
+
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category)
 admin.site.register(SubCategory, SubCategoryAdmin)
 admin.site.register(Tag)
 admin.site.register(Blog, BlogAdmin)
+admin.site.register(View_Ips, ViewAdmin)

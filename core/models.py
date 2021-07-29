@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 # Create your models here.
@@ -48,8 +49,13 @@ class Product(models.Model):
 
     Image = models.ImageField(upload_to='product_images/', null=True, blank=True, default='product_images/alt.png')
 
+    views = models.IntegerField(default=0)
+
     def __str__(self):
         return f'{self.ProductName} {self.SKU}'
+
+    def get_absolute_url(self):
+        return reverse('core:detail', args=f'{self.id}')
 
     class Meta:
         verbose_name = 'Product'
@@ -83,3 +89,17 @@ class Blog(models.Model):
     class Meta:
         verbose_name = 'Blog'
         verbose_name_plural = 'Blogs'
+
+
+class View_Ips(models.Model):
+    Product = models.ForeignKey(Product, on_delete=models.CASCADE)
+
+    ip = models.CharField(max_length=50)
+    Date = models.DateTimeField()
+
+    def __str__(self):
+        return f'{self.Product} {self.ip} {self.Date}'
+
+    class Meta:
+        verbose_name = 'View IP'
+        verbose_name_plural = 'View IPs'

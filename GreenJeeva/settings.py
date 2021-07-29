@@ -79,14 +79,14 @@ WSGI_APPLICATION = 'GreenJeeva.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ddhvccqvp13rl6',
-        'USER': 'qcuawoniqcucqn',
-        'PASSWORD': '45497c5da1b06069cdec5788d7a414a8534af87e9f6c6723c40d127f7f5cb77f',
-        'HOST': 'ec2-52-86-25-51.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'NAME': 'ddhvccqvp13rl6',
+        # 'USER': 'qcuawoniqcucqn',
+        # 'PASSWORD': '45497c5da1b06069cdec5788d7a414a8534af87e9f6c6723c40d127f7f5cb77f',
+        # 'HOST': 'ec2-52-86-25-51.compute-1.amazonaws.com',
+        # 'PORT': '5432',
     }
 }
 
