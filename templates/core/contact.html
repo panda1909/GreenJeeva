@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Product Detail</title>
+    <title>Contac Us</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -85,7 +85,8 @@
                             <a href="{% url 'core:products' %}" class="nav-link">Products</a>
                             <ul class="dropdown">
                                 {% for cat in category %}
-                                    <li><a href="{% url 'core:catgory' cat.Name %}" class="nav-link">{{ cat.Name }}</a></li>
+                                    <li><a href="{% url 'core:catgory' cat.Name %}" class="nav-link">{{ cat.Name }}</a>
+                                    </li>
                                 {% endfor %}
 
                                 {#                                <li class="has-children">#}
@@ -123,12 +124,12 @@
 
     <div class="p-b-5 p-t-100">
         <h1 style="font-size: 18px; font-style: italic;" class="ltext-100 cl4 txt-center respon1">
-            See What Others are buying
+            Get in Touch
         </h1>
     </div>
 
     <h2 style="color: black;" class="ltext-105 cl0 txt-center p-b-10">
-        Product Details
+{#        Product Details#}
     </h2>
 
 
@@ -143,14 +144,11 @@
             <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
         </a>
 
-        <a href="{% url 'core:products' %}" class="stext-109 cl8 hov-cl1 trans-04">
-            Products
+        <a href="{% url 'core:contact' %}" class="stext-109 cl8 hov-cl1 trans-04">
+            Contact Us
             <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
         </a>
 
-        <span class="stext-109 cl4">
-				{{ obj.ProductName }}
-			</span>
     </div>
 </div>
 
@@ -158,291 +156,83 @@
 <!-- Product Detail -->
 <section class="sec-product-detail bg0 p-t-65 p-b-60">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-lg-7 p-b-30">
-                <div class="p-l-25 p-r-30 p-lr-0-lg">
-                    <div class="wrap-slick3 flex-sb flex-w">
-                        <div class="wrap-slick3-dots"></div>
-                        <div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
-
-                        <div class="slick3 gallery-lb">
-                            <div class="item-slick3" data-thumb="{{ obj.Image.url }}">
-
-
-                                <div class="wrap-pic-w pos-relative">
-                                    <img style="border: 1px solid rgb(228, 228, 228);" src="{{ obj.Image.url }}"
-                                         alt="{{ obj.ProductName }}">
-
-                                    <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
-                                       href="{{ obj.Image.url }}">
-                                        <i class="fa fa-expand"></i>
-                                    </a>
-                                </div>
-
-
-                            </div>
-
-                            <div class="item-slick3" data-thumb="{{ obj.Image.url }}">
-                                <div class="wrap-pic-w pos-relative">
-                                    <img style="border: 1px solid rgb(228, 228, 228);" src="{{ obj.Image.url }}"
-                                         alt="{{ obj.ProductName }}">
-
-                                    <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
-                                       href="{{ obj.Image.url }}">
-                                        <i class="fa fa-expand"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="item-slick3" data-thumb="{{ obj.Image.url }}">
-                                <div class="wrap-pic-w pos-relative">
-                                    <img style="border: 1px solid rgb(228, 228, 228);" src="{{ obj.Image.url }}"
-                                         alt="{{ obj.ProductName }}">
-
-                                    <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
-                                       href="{{ obj.Image.url }}">
-                                        <i class="fa fa-expand"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-5 p-b-30">
-                <div class="p-r-50 p-lr-0-lg">
-                    <h4 class="mtext-105 cl2 js-name-detail p-b-14">
-                        {{ obj.ProductName }}
-                    </h4>
-
-                    <span class="mtext-106 cl2">
-							Product SKU: {{ obj.SKU }}
-						</span>
-
-                    <p class="stext-102 cl3 p-t-23">
-                        {{ obj.Description }}
-                    </p>
-
-                    <!--  -->
-                    {#                    <div class="p-t-33">#}
-                    {#                        <div class="flex-w flex-r-m p-b-10">#}
-                    {##}
-                    {##}
-                    {#                        </div>#}
-                    {##}
-                    {##}
-                    {#                        <div class="flex-w flex-l-m p-b-10">#}
-                    {##}
-                    {#                            <div class="row no-gutters">#}
-                    {##}
-                    {#                                <div class="col-6">#}
-                    {#                                    <div class="size-204 flex-w flex-m respon6-next">#}
-                    {#                                        <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail mr-3"#}
-                    {#                                                style="background-color: white;#}
-                    {#											border: 1px solid rgb(73, 95, 223); color: rgb(73, 95, 223)">#}
-                    {#                                            View Details#}
-                    {#                                        </button>#}
-                    {##}
-                    {##}
-                    {#                                    </div>#}
-                    {##}
-                    {#                                </div>#}
-                    {##}
-                    {#                                <div class="col-6">#}
-                    {#                                    <div class="size-204 flex-w flex-m respon6-next">#}
-                    {#                                        <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail mr-3">#}
-                    {#                                            See More#}
-                    {#                                        </button>#}
-                    {##}
-                    {##}
-                    {#                                    </div>#}
-                    {##}
-                    {#                                </div>#}
-                    {##}
-                    {##}
-                    {#                            </div>#}
-                    {##}
-                    {##}
-                    {#                        </div>#}
-                    {#                    </div>#}
-
-                    <!--  -->
-                    <div class="flex-w flex-m p-l-0 p-t-40 respon7">
-
-
-                        <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100"
-                           data-tooltip="Facebook">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-
-                        <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100"
-                           data-tooltip="Twitter">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-
-                        <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100"
-                           data-tooltip="Google Plus">
-                            <i class="fa fa-google-plus"></i>
-                        </a>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
+        {#        <div class="row">#}
+        {#            <div class="col-md-6 col-lg-7 p-b-30">#}
+        {#                <div class="p-l-25 p-r-30 p-lr-0-lg">#}
+        {#                    <div class="wrap-slick3 flex-sb flex-w">#}
+        {#                        <div class="wrap-slick3-dots">#}
+        {##}
+        {#                        </div>#}
+        {#                        <div class="wrap-slick3-arrows flex-sb-m flex-w">#}
+        {##}
+        {#                        </div>#}
+        {##}
+        {#                        <div class="slick3 gallery-lb">#}
+        {#                        </div>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#            </div>#}
+        {##}
+        {#            <div class="col-md-6 col-lg-5 p-b-30">#}
+        {#                <div class="p-r-50 p-lr-0-lg">#}
+        {##}
+        {#                    <div class="flex-w flex-m p-l-0 p-t-40 respon7">#}
+        {##}
+        {#                    </div>#}
+        {##}
+        {#                </div>#}
+        {#            </div>#}
+        {#        </div>#}
 
         <div class="bor10 m-t-50 p-t-43 p-b-40">
             <!-- Tab01 -->
             <div class="tab01">
                 <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
-                    <li class="nav-item p-b-10">
-                        <a class="nav-link active" data-toggle="tab" href="#description" role="tab">Description</a>
-                    </li>
-                    <!--
-                                            <li class="nav-item p-b-10">
-                                                <a class="nav-link" data-toggle="tab" href="#information" role="tab">Additional information</a>
-                                            </li> -->
-
-
-                </ul>
-
                 <!-- Tab panes -->
                 <div class="tab-content p-t-43">
                     <!-- - -->
                     <div class="tab-pane fade show active" id="description" role="tabpanel">
                         <div class="how-pos2 p-lr-15-md">
-                            {#                            <p class="stext-102 cl6">#}
-                            {#                                Curcuma Longa Is Commonly Known As Turmeric. It Belongs To Family Zingiberaceae. Its#}
-                            {#                                Root Is Used In Spice. It Found In Yellow-Orange Color Powder. It Is Widely Used In Food#}
-                            {#                                For Its Flavor And Yellow Color. The Major Active Components In Turmeric Are Curcumin,#}
-                            {#                                Demethoxycurcumin#}
-                            {#                                Curcuma Longa Is Commonly Known As Turmeric. It Belongs To Family Zingiberaceae. Its#}
-                            {#                                Root Is Used In Spice. It Found In Yellow-Orange Color Powder. It Is Widely Used In Food#}
-                            {#                                For Its Flavor And Yellow Color. The Major Active Components In Turmeric Are Curcumin,#}
-                            {#                                Demethoxycurcumin#}
-                            {#                                Curcuma Longa Is Commonly Known As Turmeric. It Belongs To Family Zingiberaceae. Its#}
-                            {#                                Root Is Used In Spice. It Found In Yellow-Orange Color Powder. It Is Widely Used In Food#}
-                            {#                                For Its Flavor And Yellow Color. The Major Active Components In Turmeric Are Curcumin,#}
-                            {#                                Demethoxycurcumin#}
-                            {#                            </p>#}
-                            <div class="row">
-                                {% if obj.BotanicalName %}
-                                    <div class="col-6">
-                                        <h5 class="stext-102 cl6">Botanical Name: {{ obj.BotanicalName }}</h5>
-                                    </div>
-                                {% endif %}
-                                {% if obj.PlantPartUsed %}
-                                    <div class="col-6">
-                                        <h5 class="stext-102 cl6">Plant Part Used: {{ obj.PlantPartUsed }}</h5>
-                                    </div>
-                                {% endif %}
-                                {% if obj.ProcessingMethod %}
-                                    <div class="col-6">
-                                        <h5 class="stext-102 cl6">Processing Method: {{ obj.ProcessingMethod }}</h5>
-                                    </div>
-                                {% endif %}
-                                {% if obj.ProductType %}
-                                    <div class="col-6">
-                                        <h5 class="stext-102 cl6">Product Type: {{ obj.ProductType }}</h5>
-                                    </div>
-                                {% endif %}
-                                {% if obj.ShelfLife %}
-                                    <div class="col-6">
-                                        <h5 class="stext-102 cl6">Shelf Life: {{ obj.ShelfLife }} month(s)</h5>
-                                    </div>
-                                {% endif %}
-                                {% if obj.Potency %}
-                                    <div class="col-6">
-                                        <h5 class="stext-102 cl6">Potency: {{ obj.Potency }}</h5>
-                                    </div>
-                                {% endif %}
-                                {% if obj.Source %}
-                                    <div class="col-6">
-                                        <h5 class="stext-102 cl6">Source: {{ obj.Source }}</h5>
-                                    </div>
-                                {% endif %}
-                                {% if obj.ProductForm %}
-                                    <div class="col-6">
-                                        <h5 class="stext-102 cl6">Product Form: {{ obj.ProductForm }}</h5>
-                                    </div>
-                                {% endif %}
-                                {% if obj.Temperature %}
-                                    <div class="col-6">
-                                        <h5 class="stext-102 cl6">Temperature: {{ obj.Temperature }}</h5>
-                                    </div>
-                                {% endif %}
-                                {% if obj.Method %}
-                                    <div class="col-6">
-                                        <h5 class="stext-102 cl6">Method: {{ obj.Method }}</h5>
-                                    </div>
-                                {% endif %}
 
-                            </div>
+                            {#                            <div class="row">#}
+                            <form method="post" class="form-group">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label for="id_Name">Name:</label>
+                                        {{ form.Name }}
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="id_Email">Email:</label>
+                                        {{ form.Email }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label for="id_Phone">Phone:</label>
+                                        {{ form.Phone }}
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="id_Subject">Subject:</label>
+                                        {{ form.Subject }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label for="id_Query">Message:</label>
+                                        {{ form.Query }}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <input class="form-control btn btn-success" type="submit" value="Submit">
+                                    </div>
+                                </div>
+                            </form>
+                            {#                            </div>#}
                         </div>
                     </div>
-
-                    <!-- - -->
-                    <!-- <div class="tab-pane fade" id="information" role="tabpanel">
-                        <div class="row">
-                            <div class="col-sm-10 col-md-12 col-lg-6 m-lr-auto">
-                                <ul class="p-lr-28 p-lr-15-sm">
-                                    <li class="flex-w flex-t p-b-7">
-                                        <span class="stext-102 cl3 size-205">
-                                            Weight
-                                        </span>
-
-                                        <span class="stext-102 cl6 size-206">
-                                            0.79 kg
-                                        </span>
-                                    </li>
-
-                                    <li class="flex-w flex-t p-b-7">
-                                        <span class="stext-102 cl3 size-205">
-                                            Dimensions
-                                        </span>
-
-                                        <span class="stext-102 cl6 size-206">
-                                            110 x 33 x 100 cm
-                                        </span>
-                                    </li>
-
-                                    <li class="flex-w flex-t p-b-7">
-                                        <span class="stext-102 cl3 size-205">
-                                            Type
-                                        </span>
-
-                                        <span class="stext-102 cl6 size-206">
-                                            Raw Ingridients
-                                        </span>
-                                    </li>
-
-                                    <li class="flex-w flex-t p-b-7">
-                                        <span class="stext-102 cl3 size-205">
-                                            Color
-                                        </span>
-
-                                        <span class="stext-102 cl6 size-206">
-                                            Brown, Yellow
-                                        </span>
-                                    </li>
-
-                                    <li class="flex-w flex-t p-b-7">
-                                        <span class="stext-102 cl3 size-205">
-                                            Size
-                                        </span>
-
-                                        <span class="stext-102 cl6 size-206">
-                                            1Kg, 2kg , 3kg
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> -->
-
-
                 </div>
             </div>
         </div>
@@ -471,232 +261,234 @@
         <div class="wrap-slick2">
             <div class="slick2">
                 {% for rel in related_obj %}
-                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-10">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0 border">
-                            <img src="{{ rel.Image.url }}" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">
+                    <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-10">
+                        <!-- Block2 -->
+                        <div class="block2">
+                            <div class="block2-pic hov-img0 border">
+                                <img src="{{ rel.Image.url }}" alt="IMG-PRODUCT"
+                                     style="border: 1px solid rgb(247, 247, 247);">
 
-                            <a href="{% url 'core:detail' rel.pk %}"
-                               class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 ">
-                                View Item
-                            </a>
-                        </div>
-
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <a href="{% url 'core:detail' rel.pk %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    {{ rel.ProductName}}
+                                <a href="{% url 'core:detail' rel.pk %}"
+                                   class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 ">
+                                    View Item
                                 </a>
-
-                                <span class="stext-105 cl3" style="color: rgb(80, 80, 80);">
-										 <b> Product ID : {{ rel.SKU }} </b>
-									</span>
                             </div>
 
+                            <div class="block2-txt flex-w flex-t p-t-14">
+                                <div class="block2-txt-child1 flex-col-l ">
+                                    <a href="{% url 'core:detail' rel.pk %}"
+                                       class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                        {{ rel.ProductName }}
+                                    </a>
 
+                                    <span class="stext-105 cl3" style="color: rgb(80, 80, 80);">
+										 <b> Product ID : {{ rel.SKU }} </b>
+									</span>
+                                </div>
+
+
+                            </div>
                         </div>
                     </div>
-                </div>
                 {% endfor %}
 
-{#                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">#}
-{#                    <!-- Block2 -->#}
-{#                    <div class="block2">#}
-{#                        <div class="block2-pic hov-img0 border">#}
-{#                            <img src="images/10.png" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">#}
-{##}
-{#                            <a href="product_details.html"#}
-{#                               class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 ">#}
-{#                                View Item#}
-{#                            </a>#}
-{#                        </div>#}
-{##}
-{#                        <div class="block2-txt flex-w flex-t p-t-14">#}
-{#                            <div class="block2-txt-child1 flex-col-l ">#}
-{#                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">#}
-{#                                    Organic sweet potato Powder#}
-{#                                </a>#}
-{##}
-{#                                <span class="stext-105 cl3" style="color: rgb(80, 80, 80);">#}
-{#									 <b> Product ID : 113 </b>#}
-{#									</span>#}
-{#                            </div>#}
-{##}
-{##}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{##}
-{##}
-{#                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">#}
-{#                    <!-- Block2 -->#}
-{#                    <div class="block2">#}
-{#                        <div class="block2-pic hov-img0 border">#}
-{#                            <img src="images/13.png" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">#}
-{##}
-{#                            <a href="product_details.html"#}
-{#                               class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 ">#}
-{#                                View Item#}
-{#                            </a>#}
-{#                        </div>#}
-{##}
-{#                        <div class="block2-txt flex-w flex-t p-t-14">#}
-{#                            <div class="block2-txt-child1 flex-col-l ">#}
-{#                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">#}
-{#                                    Trustveda Organic Ashwagandha Root Powder#}
-{#                                </a>#}
-{##}
-{#                                <span class="stext-105 cl3" style="color: rgb(80, 80, 80);">#}
-{#										<b> Product ID : 114  </b>#}
-{#									</span>#}
-{#                            </div>#}
-{##}
-{##}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{##}
-{#                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">#}
-{#                    <!-- Block2 -->#}
-{#                    <div class="block2">#}
-{#                        <div class="block2-pic hov-img0 border">#}
-{#                            <img src="images/12.png" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">#}
-{##}
-{#                            <a href="product_details.html"#}
-{#                               class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 1">#}
-{#                                View Item#}
-{#                            </a>#}
-{#                        </div>#}
-{##}
-{#                        <div class="block2-txt flex-w flex-t p-t-14">#}
-{#                            <div class="block2-txt-child1 flex-col-l ">#}
-{#                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">#}
-{#                                    Organic Brown Rice Protein powder#}
-{#                                </a>#}
-{##}
-{#                                <span class="stext-105 cl3" style="color: rgb(80, 80, 80);">#}
-{#											<b> Product ID : 115  </b>#}
-{#										</span>#}
-{#                            </div>#}
-{##}
-{##}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{##}
-{#                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">#}
-{#                    <!-- Block2 -->#}
-{#                    <div class="block2">#}
-{#                        <div class="block2-pic hov-img0 border">#}
-{#                            <img src="images/11.png" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">#}
-{##}
-{#                            <a href="product_details.html"#}
-{#                               class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 ">#}
-{#                                View Item#}
-{#                            </a>#}
-{#                        </div>#}
-{##}
-{#                        <div class="block2-txt flex-w flex-t p-t-14">#}
-{#                            <div class="block2-txt-child1 flex-col-l ">#}
-{#                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">#}
-{#                                    Organic Triphala Extract#}
-{#                                </a>#}
-{##}
-{#                                <span class="stext-105 cl3" style="color: rgb(80, 80, 80);">#}
-{#											 <b> Product ID : 112 </b>#}
-{#										</span>#}
-{#                            </div>#}
-{##}
-{##}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{##}
-{#                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">#}
-{#                    <!-- Block2 -->#}
-{#                    <div class="block2">#}
-{#                        <div class="block2-pic hov-img0 border">#}
-{#                            <img src="images/10.png" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">#}
-{##}
-{#                            <a href="product_details.html"#}
-{#                               class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04">#}
-{#                                View Item#}
-{#                            </a>#}
-{#                        </div>#}
-{##}
-{#                        <div class="block2-txt flex-w flex-t p-t-14">#}
-{#                            <div class="block2-txt-child1 flex-col-l ">#}
-{#                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">#}
-{#                                    Organic sweet potato Powder#}
-{#                                </a>#}
-{##}
-{#                                <span class="stext-105 cl3" style="color: rgb(80, 80, 80);">#}
-{#										 <b> Product ID : 113 </b>#}
-{#										</span>#}
-{#                            </div>#}
-{##}
-{##}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{##}
-{##}
-{#                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">#}
-{#                    <!-- Block2 -->#}
-{#                    <div class="block2">#}
-{#                        <div class="block2-pic hov-img0 border">#}
-{#                            <img src="images/13.png" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">#}
-{##}
-{#                            <a href="product_details.html"#}
-{#                               class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 ">#}
-{#                                View Item#}
-{#                            </a>#}
-{#                        </div>#}
-{##}
-{#                        <div class="block2-txt flex-w flex-t p-t-14">#}
-{#                            <div class="block2-txt-child1 flex-col-l ">#}
-{#                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">#}
-{#                                    Trustveda Organic Ashwagandha Root Powder#}
-{#                                </a>#}
-{##}
-{#                                <span class="stext-105 cl3" style="color: rgb(80, 80, 80);">#}
-{#											<b> Product ID : 114  </b>#}
-{#										</span>#}
-{#                            </div>#}
-{##}
-{##}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{##}
-{#                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">#}
-{#                    <!-- Block2 -->#}
-{#                    <div class="block2">#}
-{#                        <div class="block2-pic hov-img0 border">#}
-{#                            <img src="images/12.png" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">#}
-{##}
-{#                            <a href="product_details.html"#}
-{#                               class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 ">#}
-{#                                View Item#}
-{#                            </a>#}
-{#                        </div>#}
-{##}
-{#                        <div class="block2-txt flex-w flex-t p-t-14">#}
-{#                            <div class="block2-txt-child1 flex-col-l ">#}
-{#                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">#}
-{#                                    Organic Brown Rice Protein powder#}
-{#                                </a>#}
-{##}
-{#                                <span class="stext-105 cl3" style="color: rgb(80, 80, 80);">#}
-{#												<b> Product ID : 115  </b>#}
-{#											</span>#}
-{#                            </div>#}
-{##}
-{##}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
+                {#                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">#}
+                {#                    <!-- Block2 -->#}
+                {#                    <div class="block2">#}
+                {#                        <div class="block2-pic hov-img0 border">#}
+                {#                            <img src="images/10.png" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">#}
+                {##}
+                {#                            <a href="product_details.html"#}
+                {#                               class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 ">#}
+                {#                                View Item#}
+                {#                            </a>#}
+                {#                        </div>#}
+                {##}
+                {#                        <div class="block2-txt flex-w flex-t p-t-14">#}
+                {#                            <div class="block2-txt-child1 flex-col-l ">#}
+                {#                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">#}
+                {#                                    Organic sweet potato Powder#}
+                {#                                </a>#}
+                {##}
+                {#                                <span class="stext-105 cl3" style="color: rgb(80, 80, 80);">#}
+                {#									 <b> Product ID : 113 </b>#}
+                {#									</span>#}
+                {#                            </div>#}
+                {##}
+                {##}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </div>#}
+                {##}
+                {##}
+                {#                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">#}
+                {#                    <!-- Block2 -->#}
+                {#                    <div class="block2">#}
+                {#                        <div class="block2-pic hov-img0 border">#}
+                {#                            <img src="images/13.png" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">#}
+                {##}
+                {#                            <a href="product_details.html"#}
+                {#                               class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 ">#}
+                {#                                View Item#}
+                {#                            </a>#}
+                {#                        </div>#}
+                {##}
+                {#                        <div class="block2-txt flex-w flex-t p-t-14">#}
+                {#                            <div class="block2-txt-child1 flex-col-l ">#}
+                {#                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">#}
+                {#                                    Trustveda Organic Ashwagandha Root Powder#}
+                {#                                </a>#}
+                {##}
+                {#                                <span class="stext-105 cl3" style="color: rgb(80, 80, 80);">#}
+                {#										<b> Product ID : 114  </b>#}
+                {#									</span>#}
+                {#                            </div>#}
+                {##}
+                {##}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </div>#}
+                {##}
+                {#                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">#}
+                {#                    <!-- Block2 -->#}
+                {#                    <div class="block2">#}
+                {#                        <div class="block2-pic hov-img0 border">#}
+                {#                            <img src="images/12.png" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">#}
+                {##}
+                {#                            <a href="product_details.html"#}
+                {#                               class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 1">#}
+                {#                                View Item#}
+                {#                            </a>#}
+                {#                        </div>#}
+                {##}
+                {#                        <div class="block2-txt flex-w flex-t p-t-14">#}
+                {#                            <div class="block2-txt-child1 flex-col-l ">#}
+                {#                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">#}
+                {#                                    Organic Brown Rice Protein powder#}
+                {#                                </a>#}
+                {##}
+                {#                                <span class="stext-105 cl3" style="color: rgb(80, 80, 80);">#}
+                {#											<b> Product ID : 115  </b>#}
+                {#										</span>#}
+                {#                            </div>#}
+                {##}
+                {##}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </div>#}
+                {##}
+                {#                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">#}
+                {#                    <!-- Block2 -->#}
+                {#                    <div class="block2">#}
+                {#                        <div class="block2-pic hov-img0 border">#}
+                {#                            <img src="images/11.png" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">#}
+                {##}
+                {#                            <a href="product_details.html"#}
+                {#                               class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 ">#}
+                {#                                View Item#}
+                {#                            </a>#}
+                {#                        </div>#}
+                {##}
+                {#                        <div class="block2-txt flex-w flex-t p-t-14">#}
+                {#                            <div class="block2-txt-child1 flex-col-l ">#}
+                {#                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">#}
+                {#                                    Organic Triphala Extract#}
+                {#                                </a>#}
+                {##}
+                {#                                <span class="stext-105 cl3" style="color: rgb(80, 80, 80);">#}
+                {#											 <b> Product ID : 112 </b>#}
+                {#										</span>#}
+                {#                            </div>#}
+                {##}
+                {##}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </div>#}
+                {##}
+                {#                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">#}
+                {#                    <!-- Block2 -->#}
+                {#                    <div class="block2">#}
+                {#                        <div class="block2-pic hov-img0 border">#}
+                {#                            <img src="images/10.png" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">#}
+                {##}
+                {#                            <a href="product_details.html"#}
+                {#                               class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04">#}
+                {#                                View Item#}
+                {#                            </a>#}
+                {#                        </div>#}
+                {##}
+                {#                        <div class="block2-txt flex-w flex-t p-t-14">#}
+                {#                            <div class="block2-txt-child1 flex-col-l ">#}
+                {#                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">#}
+                {#                                    Organic sweet potato Powder#}
+                {#                                </a>#}
+                {##}
+                {#                                <span class="stext-105 cl3" style="color: rgb(80, 80, 80);">#}
+                {#										 <b> Product ID : 113 </b>#}
+                {#										</span>#}
+                {#                            </div>#}
+                {##}
+                {##}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </div>#}
+                {##}
+                {##}
+                {#                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">#}
+                {#                    <!-- Block2 -->#}
+                {#                    <div class="block2">#}
+                {#                        <div class="block2-pic hov-img0 border">#}
+                {#                            <img src="images/13.png" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">#}
+                {##}
+                {#                            <a href="product_details.html"#}
+                {#                               class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 ">#}
+                {#                                View Item#}
+                {#                            </a>#}
+                {#                        </div>#}
+                {##}
+                {#                        <div class="block2-txt flex-w flex-t p-t-14">#}
+                {#                            <div class="block2-txt-child1 flex-col-l ">#}
+                {#                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">#}
+                {#                                    Trustveda Organic Ashwagandha Root Powder#}
+                {#                                </a>#}
+                {##}
+                {#                                <span class="stext-105 cl3" style="color: rgb(80, 80, 80);">#}
+                {#											<b> Product ID : 114  </b>#}
+                {#										</span>#}
+                {#                            </div>#}
+                {##}
+                {##}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </div>#}
+                {##}
+                {#                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">#}
+                {#                    <!-- Block2 -->#}
+                {#                    <div class="block2">#}
+                {#                        <div class="block2-pic hov-img0 border">#}
+                {#                            <img src="images/12.png" alt="IMG-PRODUCT" style="border: 1px solid rgb(247, 247, 247);">#}
+                {##}
+                {#                            <a href="product_details.html"#}
+                {#                               class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 ">#}
+                {#                                View Item#}
+                {#                            </a>#}
+                {#                        </div>#}
+                {##}
+                {#                        <div class="block2-txt flex-w flex-t p-t-14">#}
+                {#                            <div class="block2-txt-child1 flex-col-l ">#}
+                {#                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">#}
+                {#                                    Organic Brown Rice Protein powder#}
+                {#                                </a>#}
+                {##}
+                {#                                <span class="stext-105 cl3" style="color: rgb(80, 80, 80);">#}
+                {#												<b> Product ID : 115  </b>#}
+                {#											</span>#}
+                {#                            </div>#}
+                {##}
+                {##}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </div>#}
 
             </div>
         </div>

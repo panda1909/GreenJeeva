@@ -33,9 +33,14 @@ class ViewAdmin(admin.ModelAdmin):
     list_display = ('Product', 'Date', 'ip')
 
 
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('Name', 'Email', 'created_at')
+
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category)
 admin.site.register(SubCategory, SubCategoryAdmin)
 admin.site.register(Tag)
 admin.site.register(Blog, BlogAdmin)
 admin.site.register(View_Ips, ViewAdmin)
+admin.site.register(Contact, ContactAdmin)

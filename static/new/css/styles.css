@@ -269,15 +269,15 @@
     .sticky-wrapper .site-navbar {
       border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
       .sticky-wrapper .site-navbar .site-menu-toggle {
-        color: #fff; }
+        color: rgb(0, 0, 0); }
       .sticky-wrapper .site-navbar .site-logo a {
-        color: #fff; }
+        color: rgb(0, 0, 0); }
       .sticky-wrapper .site-navbar .site-menu > li > a {
         color: rgb(0, 0, 0) !important; }
         .sticky-wrapper .site-navbar .site-menu > li > a:hover, .sticky-wrapper .site-navbar .site-menu > li > a.active {
-          color: #fff !important; }
+          color: rgb(0, 0, 0) !important; }
     .sticky-wrapper.is-sticky .site-navbar {
-      background: #fff;
+      background: rgb(255, 255, 255);
       border-bottom: 1px solid transparent;
       -webkit-box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.1);
       box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.1); }

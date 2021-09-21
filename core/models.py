@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 
+from phonenumber_field.modelfields import PhoneNumberField
 
 # Create your models here.
 class Category(models.Model):
@@ -37,7 +38,7 @@ class Product(models.Model):
     ProductType = models.CharField(max_length=128, default='Product Type')
 
     Description = models.TextField(max_length=10000, default='Description', null=True, blank=True)
-    ShelfLife = models.CharField(max_length=10, default='1', verbose_name='Self Life in Months', null=True, blank=True)
+    ShelfLife = models.CharField(max_length=10, default='1', verbose_name='Shelf Life in Months', null=True, blank=True)
 
     SubCategory = models.ForeignKey(SubCategory, on_delete=models.DO_NOTHING, default=1, null=True, blank=True)
 
@@ -84,7 +85,10 @@ class Blog(models.Model):
         return f'{self.Date} {self.Tags}'
 
     def get_tags(self):
-        return "\n".join([t.Name for t in self.Tags.all()])
+        return "\n#".join([t.Name for t in self.Tags.all()])
+
+    def get_absolute_url(self):
+        return reverse('core:blog_detail', args=f'{self.Title}')
 
     class Meta:
         verbose_name = 'Blog'
@@ -103,3 +107,21 @@ class View_Ips(models.Model):
     class Meta:
         verbose_name = 'View IP'
         verbose_name_plural = 'View IPs'
+
+
+class Contact(models.Model):
+    Email = models.EmailField(null=True, blank=True)
+    Phone = PhoneNumberField(null=True, blank=True)
+    Name = models.CharField(max_length=100)
+    Subject = models.CharField(max_length=500)
+    Query = models.TextField()
+
+    created_at = models.DateTimeField(auto_now_add=True, editable=False)
+
+    class Meta:
+        verbose_name = 'Query'
+        verbose_name_plural = 'Queries'
+
+    def __str__(self):
+        return f'{self.Name} - {self.Subject} - {self.created_at}'
+

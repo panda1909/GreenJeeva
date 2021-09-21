@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # third party apps
     'django_excel_fixture',
     'django_summernote',
+    'phonenumber_field'
 ]
 
 MIDDLEWARE = [

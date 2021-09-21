@@ -187,11 +187,26 @@ a{
   background-color: #717fe0;
 }
 
+
 @media (max-width: 575px) {
   .btn-back-to-top {
     bottom: 0px;
     right: 15px;
   }
+
+  .p-t-200{
+    margin: none;
+    padding:none;
+  }
+
+
+  .f-z\:\.9, .f\:\.9 {
+    font-size: .73333rem!important;
+    font-weight: 600;
+    margin:none;
+    
+}
+
 }
 
 
@@ -610,6 +625,11 @@ a{
   .wrap-search-header {
     height: 80px;
   }
+
+
+
+
+
 }
 
 

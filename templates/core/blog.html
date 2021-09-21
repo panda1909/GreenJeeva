@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Landing</title>
+    <title>Blogs</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -24,34 +24,12 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{% static 'vendor/daterangepicker/daterangepicker.css' %}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{% static 'vendor/slick/slick.css' %}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{% static 'vendor/MagnificPopup/magnific-popup.css' %}">
-    <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{% static 'vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
-    <!--===============================================================================================-->
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+            crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="{% static 'new/fonts/icomoon/style.css' %}">
-
-    <link rel="stylesheet" href="{% static 'new/css/owl.carousel.min.css' %}">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'new/css/bootstrap.min.css' %}">
-
-    <!-- Style -->
-    <link rel="stylesheet" href="{% static 'new/css/style.css' %}">
-
-    <link rel="stylesheet" href="{% static 'new/css/tilestyle.css' %}">
-
-
-    <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-    <link rel="stylesheet" href="{% static 'new/css/extra.css' %}">
-    <!--===============================================================================================-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
             integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
             crossorigin="anonymous"></script>
@@ -60,14 +38,33 @@
             crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!--===============================================================================================-->
+
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'new/fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'new/css/owl.carousel.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+    <link rel="stylesheet" href="{% static 'new/css/extra.css' %}">
+
+    <link rel="stylesheet" href="{% static 'new/css/bootstrap.min.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'new/css/styles.css' %}">
+    <!--===============================================================================================-->
 </head>
 
 
 <body class="animsition">
 
-
 <!-- Header -->
+<!-- Header -->
+<header class="header-v3"></header>
 
 
 <div class="site-mobile-menu site-navbar-target">
@@ -79,77 +76,163 @@
     <div class="site-mobile-menu-body"></div>
 </div>
 
-{% block header %}
-    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+<header class="site-navbar js-sticky-header site-navbar-target " role="banner">
+
+    <div class="container-fluid">
+        <div class="row align-items-center p-b-10">
+
+            <div class="col-6 col-xl-2">
+                <a href="#" class="logo">
+                    <img src="{% static 'images/black logo.png' %}" alt="IMG-LOGO" class="mt-1 ml-lg-5 ">
+                </a>
+            </div>
+
+            <div class="col-12 col-md-10 d-none d-xl-block">
+                <nav class="site-navigation position-relative text-right" role="navigation">
+
+                    <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                        <li><a href="{% url 'core:home' %}" class="nav-link">Home</a></li>
+                        <li><a href="#home-section" class="nav-link">Abouts US</a></li>
+                        <li class="has-children">
+                            <a href="{% url 'core:products' %}" class="nav-link">Products</a>
+                            <ul class="dropdown">
+                                {% for cat in category %}
+                                    <li><a href="{% url 'core:catgory' cat.Name %}" class="nav-link">{{ cat.Name }}</a></li>
+                                {% endfor %}
+
+                                {#                                <li class="has-children">#}
+                                {#                                    <a href="#">More Links</a>#}
+                                {#                                    <ul class="dropdown">#}
+                                {#                                        <li><a href="#">Menu One</a></li>#}
+                                {#                                        <li><a href="#">Menu Two</a></li>#}
+                                {#                                        <li><a href="#">Menu Three</a></li>#}
+                                {#                                    </ul>#}
+                                {#                                </li>#}
+                            </ul>
+                        </li>
+
+                        <li><a href="#home-section" class="nav-link">Certificate</a></li>
+                        <li><a href="{% url 'core:blogs' %}" class="nav-link">Blog</a></li>
+                        <li><a href="{% url 'core:contact' %}" class="nav-link">Contact</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+
+
+            <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;">
+                <a href="#" class="site-menu-toggle js-menu-toggle float-right"><span
+                    class="icon-menu h3"></span></a></div>
+
+        </div>
+    </div>
+
+</header>
+
+
+<!-- Title page -->
+<section class="bg-img1 txt-center p-lr-15 p-tb-100 p-b-10"
+         style="background-image: url('static/images/product_1.png');">
+
+</section>
+
+<div class="p-b-5 p-t-10">
+    <h1 style="font-size: 18px; font-style: italic;" class="ltext-100 cl4 txt-center respon1">
+        Read our Blogs to get further insight.
+    </h1>
+</div>
+
+<h2 style="color: black;" class="ltext-105 cl0 txt-center p-b-20">
+    All Blogs
+</h2>
+
+
+<section>
+
+
+    <div class="">
+
 
         <div class="container-fluid">
 
 
-            <div class="row align-item s-center">
-
-                <div class="col-6 col-xl-2" style="margin-top: 25px;">
-                    <a href="#" class="logo">
-                        <img src="{% static 'images/Group 49.png' %}" alt="IMG-LOGO" class="mt-1 ml-lg-5">
-                    </a>
-                </div>
-
-                <div class="col-12 col-md-10 d-none d-xl-block">
-                    <nav class="site-navigation position-relative text-right" role="navigation">
-
-                        <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                            <li><a href="#home-section" class="nav-link">Home</a></li>
-                            <li><a href="#home-section" class="nav-link">Abouts US</a></li>
-                            <li class="has-children">
-                                <a href="product_details.html" class="nav-link">Products</a>
-                                <ul class="dropdown">
-                                    <li><a href="products.html" class="nav-link">Dietary Ingredients</a></li>
-                                    <li><a href="products.html" class="nav-link">Ancient Spices</a></li>
-                                    <li><a href="products.html" class="nav-link">Amino Acids</a></li>
-                                    <li><a href="products.html" class="nav-link">Dietary Ingredients</a></li>
-                                    <li><a href="products.html" class="nav-link">Ancient Spices</a></li>
-                                    <li><a href="products.html" class="nav-link">Amino Acids</a></li>
-                                    <li><a href="products.html" class="nav-link">Dietary Ingredients</a></li>
-                                    <li><a href="products.html" class="nav-link">Ancient Spices</a></li>
-                                    <li><a href="products.html" class="nav-link">Amino Acids</a></li>
-
-                                    <li class="has-children">
-                                        <a href="#">Liver Support</a>
-                                        <ul class="dropdown">
-                                            <li><a href="products.html">Liver Support</a></li>
-                                            <li><a href="products.html">Liver Support</a></li>
-                                            <li><a href="products.html">Liver Support</a></li>
-                                        </ul>
-                                    </li>
+            <div class="row ">
 
 
-                                </ul>
-                            </li>
+                <!-- sidebar -->
 
-                            <li><a href="#home-section" class="nav-link">Certificate</a></li>
-                            <li><a href="#blog-section" class="nav-link">Blog</a></li>
-                            <li><a href="#contact-section" class="nav-link">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a
-                        href="#"
-                        class="site-menu-toggle js-menu-toggle float-right"><span
-                        class="icon-menu h3"></span></a>
+
+
+
+                <!-- sidebar -->
+
+
+                <div class="col-md-10">
+                    <div class="tool-bar mt-3 mt-sm-0">
+                        <div class="row">
+
+                            <div class="col-sm-3 col-md-2  ml-auto text-right">
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row no-gutters">
+
+                        {% for obj in obj %}
+                            <div class="col-md-3 col-sm-12">
+
+                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+                                    <!-- Block2 -->
+                                    <div class="block2">
+                                        <div class="block2-pic hov-img0 border">
+                                            <img src="{{ obj.Image.url }}" alt="{{ prod.Title }}"
+                                                 style="border: 1px solid rgb(247, 247, 247);">
+
+                                            <a href="{% url 'core:blog_detail' obj.Title %}"
+                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bgthis bor2 hov-btn1 p-lr-15 trans-04 ">
+                                                View Blog
+                                            </a>
+                                        </div>
+
+                                        <div class="block2-txt flex-w flex-t p-t-14">
+                                            <div class="block2-txt-child1 flex-col-l">
+                                                <a href="{% url 'core:blog_detail' obj.Title %}"
+                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                                    {{ obj.Title }}
+                                                </a>
+
+                                                <span class="stext-105 cl3" style="color: rgb(80, 80, 80);">
+														 <b> #{{ obj.get_tags }} </b>
+													</span>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        {% endfor %}
+
+
+                    </div>
+
+
                 </div>
             </div>
         </div>
-    </header>
-{% endblock %}
-{% block content %}
-
-{% endblock %}
+    </div>
 
 
+</section>
 
 
 <!-- Footer -->
-<!-- footer -->
-
 <footer class="bg3 p-t-75 p-b-32">
     <div class="container">
         <div class="row">
@@ -196,28 +279,23 @@
                 <div class="p-t-40">
                     <div class="flex-c-m flex-w p-b-18">
                         <a href="#" class="m-all-1">
-                            <img style="max-height: 50px; max-width: 50px;" src="{% static 'images/1.png' %}"
-                                 alt="ICON-PAY">
+                            <img style="max-height: 50px; max-width: 50px;" src="images/1.png" alt="ICON-PAY">
                         </a>
 
                         <a href="#" class="m-all-1">
-                            <img style="max-height: 60px; max-width: 60px;" src="{% static 'images/sas.png' %}"
-                                 alt="ICON-PAY">
+                            <img style="max-height: 60px; max-width: 60px;" src="images/sas.png" alt="ICON-PAY">
                         </a>
 
                         <a href="#" class="m-all-1">
-                            <img style="max-height: 100px; max-width: 100px;" src="{% static 'images/cac.png' %}"
-                                 alt="ICON-PAY">
+                            <img style="max-height: 100px; max-width: 100px;" src="images/cac.png" alt="ICON-PAY">
                         </a>
 
                         <a href="#" class="m-all-1">
-                            <img style="max-height: 50px; max-width: 50px;" src="{% static 'images/sfgd.png' %}"
-                                 alt="ICON-PAY">
+                            <img style="max-height: 50px; max-width: 50px;" src="images/sfgd.png" alt="ICON-PAY">
                         </a>
 
                         <a href="#" class="m-all-1">
-                            <img style="max-height: 50px; max-width: 50px;" src="{% static 'images/xac.png' %}"
-                                 alt="ICON-PAY">
+                            <img style="max-height: 50px; max-width: 50px;" src="images/xac.png" alt="ICON-PAY">
                         </a>
                     </div>
 
@@ -272,7 +350,10 @@
                     </li>
                 </ul>
             </div>
+
+
         </div>
+
     </div>
 </footer>
 
@@ -284,7 +365,6 @@
 		</span>
 </div>
 
-
 <!-- Modal1 -->
 <div class="wrap-modal1 js-modal1 p-t-60 p-b-20">
     <div class="overlay-modal1 js-hide-modal1"></div>
@@ -292,7 +372,7 @@
     <div class="container">
         <div class="bg0 p-t-60 p-b-30 p-lr-15-lg how-pos3-parent">
             <button class="how-pos3 hov3 trans-04 js-hide-modal1">
-                <img src="{% static 'images/icons/icon-close.png' %}" alt="CLOSE">
+                <img src="images/icons/icon-close.png" alt="CLOSE">
             </button>
 
             <div class="row">
@@ -305,10 +385,10 @@
                             <div class="slick3 gallery-lb">
                                 <div class="item-slick3" data-thumb="images/product-detail-01.jpg">
                                     <div class="wrap-pic-w pos-relative">
-                                        <img src="{% static 'images/product-detail-01.jpg' %}" alt="IMG-PRODUCT">
+                                        <img src="images/product-detail-01.jpg" alt="IMG-PRODUCT">
 
                                         <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
-                                           href="{% static 'images/product-detail-01.jpg' %}">
+                                           href="images/product-detail-01.jpg">
                                             <i class="fa fa-expand"></i>
                                         </a>
                                     </div>
@@ -316,10 +396,10 @@
 
                                 <div class="item-slick3" data-thumb="images/product-detail-02.jpg">
                                     <div class="wrap-pic-w pos-relative">
-                                        <img src="{% static 'images/product-detail-02.jpg' %}" alt="IMG-PRODUCT">
+                                        <img src="images/product-detail-02.jpg" alt="IMG-PRODUCT">
 
                                         <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
-                                           href="{% static 'images/product-detail-02.jpg' %}">
+                                           href="images/product-detail-02.jpg">
                                             <i class="fa fa-expand"></i>
                                         </a>
                                     </div>
@@ -327,10 +407,10 @@
 
                                 <div class="item-slick3" data-thumb="images/product-detail-03.jpg">
                                     <div class="wrap-pic-w pos-relative">
-                                        <img src="{% static 'images/product-detail-03.jpg' %}" alt="IMG-PRODUCT">
+                                        <img src="images/product-detail-03.jpg" alt="IMG-PRODUCT">
 
                                         <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
-                                           href="{% static 'images/product-detail-03.jpg' %}">
+                                           href="images/product-detail-03.jpg">
                                             <i class="fa fa-expand"></i>
                                         </a>
                                     </div>
