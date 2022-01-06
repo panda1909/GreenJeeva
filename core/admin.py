@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 from .models import *
+import core
 
 
 # Register your models here.
@@ -37,6 +38,22 @@ class ContactAdmin(admin.ModelAdmin):
     list_display = ('Name', 'Email', 'created_at')
 
 
+class AboutUsAdmin(SummernoteModelAdmin):
+    summernote_fields = ('Content',)
+
+    def has_add_permission(self, request):
+        # check if generally has add permission
+        returnVal = super().has_add_permission(request)
+        # set add permission to False, if object already exists
+        if returnVal and core.models.AboutUs.objects.exists():
+            returnVal = False
+        return returnVal
+
+    def has_delete_permission(self, request, obj=None):
+        # Disable delete
+        return False
+
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category)
 admin.site.register(SubCategory, SubCategoryAdmin)
@@ -44,3 +61,4 @@ admin.site.register(Tag)
 admin.site.register(Blog, BlogAdmin)
 admin.site.register(View_Ips, ViewAdmin)
 admin.site.register(Contact, ContactAdmin)
+admin.site.register(AboutUs, AboutUsAdmin)

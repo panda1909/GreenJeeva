@@ -149,7 +149,10 @@
         </a>
 
         <span class="stext-109 cl4">
-				{{ obj.ProductName }}
+				<a href="{% url 'core:sub_category' obj.SubCategory.Name %}"
+                   class="stext-109 cl8 hov-cl1 trans-04">
+                    {{ obj.SubCategory.Name }}
+                </a>
 			</span>
     </div>
 </div>

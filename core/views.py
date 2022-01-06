@@ -4,7 +4,7 @@ from django.utils import timezone
 from django.core.paginator import Paginator
 
 from datetime import datetime, timedelta
-from .models import Product, Category, SubCategory, Blog, View_Ips
+from .models import Product, Category, SubCategory, Blog, View_Ips, AboutUs
 from .forms import *
 
 
@@ -150,3 +150,8 @@ def contact(request):
         'form': form
     }
     return render(request, 'core/contact.html', context)
+
+
+def about_us(request):
+    obj = AboutUs.objects.get(id=1)
+    return render(request, 'core/aboutus.html', {'obj': obj})

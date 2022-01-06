@@ -3,6 +3,7 @@ from django.urls import reverse
 
 from phonenumber_field.modelfields import PhoneNumberField
 
+
 # Create your models here.
 class Category(models.Model):
     Name = models.CharField(max_length=128, default='Category', verbose_name='Category')
@@ -125,3 +126,10 @@ class Contact(models.Model):
     def __str__(self):
         return f'{self.Name} - {self.Subject} - {self.created_at}'
 
+
+class AboutUs(models.Model):
+    Content = models.TextField()
+
+    class Meta:
+        verbose_name = 'About Us Section'
+        verbose_name_plural = 'About Us Section'
